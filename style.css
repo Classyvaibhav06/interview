@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f7f5ef;
+}
+
+.hero-div {
+  height: 100vh;
+  min-height: 620px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 3vh;
+  width: 100%;
+  background-color: rgb(37, 36, 36);
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.nav li {
+  list-style: none;
+}
+.nav li a {
+  text-decoration: none;
+  color: white;
+}
+.hero-div h1 {
+  color: rgb(20, 20, 20);
+  font-size: clamp(4rem, 11vw, 8rem);
+  top: 27%;
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: 700;
+  letter-spacing: -5px;
+}
+.hero-div p {
+  color: rgb(20, 20, 20);
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+.hero-text{
+  top: 54%;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+  gap:5px;
+}
+
+button {
+  margin-top: 25px;
+  border: 0;
+  background-color: rgb(37, 36, 36);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 2px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ed8f26;
+}
+
+.features {
+  padding: 90px 8% 110px;
+  color: rgb(37, 36, 36);
+  font-family: sans-serif;
+}
+
+.section-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: normal;
+}
+
+.features h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  max-width: 500px;
+  margin-bottom: 45px;
+  font-weight: 600;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature-card {
+  min-height: 220px;
+  padding: 28px;
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 1px solid #ddd;
+}
+
+.feature-card span {
+  color: #ed8f26;
+  font-size: 13px;
+}
+
+.feature-card h3 {
+  margin: 55px 0 12px;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #68645e;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+@media (max-width: 650px) {
+  .nav {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    gap: 20px;
+  }
+
+  .nav li a {
+    font-size: 13px;
+  }
+
+  .hero-div {
+    min-height: 570px;
+  }
+
+  .hero-div h1 {
+    top: 30%;
+    letter-spacing: -3px;
+  }
+
+  .hero-text {
+    top: 55%;
+  }
+
+  .hero-div p {
+    font-size: 15px;
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    padding: 65px 22px 75px;
+  }
+}
